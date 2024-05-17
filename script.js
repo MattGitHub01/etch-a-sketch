@@ -36,5 +36,7 @@ button.addEventListener('click', () => {
                 drawContainer.removeChild(gridSquare);
             });
         }
+    } else {
+        alert('Error: input must be a number between 1 and 100');
     }
 });
