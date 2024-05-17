@@ -10,3 +10,6 @@ header2.textContent = 'Enter a number to size the grid!';
 header2.classList.add('header2');
 container.appendChild(header2);
 
+const button = document.createElement('button');
+button.textContent = 'Draw Grid';
+container.appendChild(button);
