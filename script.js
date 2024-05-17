@@ -21,8 +21,8 @@ container.appendChild(drawContainer);
 button.addEventListener('click', () => {
     let userInput = parseInt(prompt('Type a number to resize the grid!'));
     let amtOfSquares = userInput * userInput;
-    let sqWidth = 40;
-    let sqHeight = 40;
+    let sqWidth = 640/userInput;
+    let sqHeight = 640/userInput;
     if ( /^[0-9.,]+$/.test(userInput) && (userInput <= 100 && userInput >= 1)) {
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
