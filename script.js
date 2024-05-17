@@ -21,16 +21,18 @@ container.appendChild(drawContainer);
 button.addEventListener('click', () => {
     let userInput = parseInt(prompt('Type a number to resize the grid!'));
     let amtOfSquares = userInput * userInput;
-    let sqWidth = 640/userInput;
-    let sqHeight = 640/userInput;
+    let sqSize = 640/userInput;
+    let colorList = ['#e81416', '#ffa500', '#faeb36', '#79c314', '#487de7', '#4b369d', '#70369d'];
+    let color = '';
     if (userInput > 0 && userInput < 101) {
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
-            gridSquare.setAttribute('style', 'width: ' + sqWidth + 'px; height: ' + sqHeight + 'px');
+            gridSquare.setAttribute('style', 'width: ' + sqSize + 'px; height: ' + sqSize + 'px');
             gridSquare.classList.add('gridSquare');
             drawContainer.appendChild(gridSquare);
             gridSquare.addEventListener('mouseover', () => {
-                gridSquare.style.backgroundColor = 'blue';
+                color = colorList[Math.floor(Math.random() * colorList.length)];
+                gridSquare.style.background = color;
             });
             button.addEventListener('click', () => {
                 drawContainer.removeChild(gridSquare);
