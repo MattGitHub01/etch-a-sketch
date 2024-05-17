@@ -20,11 +20,13 @@ container.appendChild(drawContainer);
 
 button.addEventListener('click', () => {
     let userInput = parseInt(prompt('Type a number to resize the grid!'));
+    let amtOfSquares = userInput * userInput;
+    let sqWidth = 40;
+    let sqHeight = 40;
     if ( /^[0-9.,]+$/.test(userInput) && (userInput <= 100 && userInput >= 1)) {
-        let num = 16;
-        let playerVal = num * num;
-        for (let i = 0; i < playerVal; i++) {
+        for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
+            gridSquare.setAttribute('style', 'width: ' + sqWidth + 'px; height: ' + sqHeight + 'px');
             gridSquare.classList.add('gridSquare');
             drawContainer.appendChild(gridSquare);
             gridSquare.addEventListener('mouseover', () => {
@@ -34,5 +36,7 @@ button.addEventListener('click', () => {
                 drawContainer.removeChild(gridSquare);
             });
         }
+    } else {
+        alert('Error: input must be a number between 1 and 100');
     }
 });
