@@ -27,12 +27,16 @@ button.addEventListener('click', () => {
     if (userInput > 0 && userInput < 101) {
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
+            let sqOpacity = 1;
             gridSquare.setAttribute('style', 'width: ' + sqSize + 'px; height: ' + sqSize + 'px');
             gridSquare.classList.add('gridSquare');
             drawContainer.appendChild(gridSquare);
             gridSquare.addEventListener('mouseover', () => {
                 color = colorList[Math.floor(Math.random() * colorList.length)];
                 gridSquare.style.background = color;
+                sqOpacity = sqOpacity - .1;
+                alert(sqOpacity);
+                gridSquare.style.opacity = sqOpacity;
             });
             button.addEventListener('click', () => {
                 drawContainer.removeChild(gridSquare);
