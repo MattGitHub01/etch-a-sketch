@@ -15,8 +15,18 @@
 
 .drawContainer {
     display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-wrap: wrap;
     flex: auto;
-    width: 640px;
-    height: 640px;
+    width: 500px;
+    height: 500px;
     border: 2px solid blue;
+}
+
+.gridSquare {
+
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
 }
