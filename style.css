@@ -15,18 +15,16 @@
 
 .drawContainer {
     display: flex;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: stretch;
     flex-wrap: wrap;
-    flex: auto;
-    width: 500px;
-    height: 500px;
+    width: 960px;
+    height: 960px;
     border: 2px solid blue;
 }
 
 .gridSquare {
-
-    width: 10px;
-    height: 10px;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
     border: 1px solid black;
 }

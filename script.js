@@ -20,7 +20,7 @@ container.appendChild(drawContainer);
 
 button.addEventListener('click', () => {
     let usrInpt = prompt('How many grid squares per side?');
-    let num = 10;
+    let num = 16;
     let playerVal = num * num;
     for (let i = 0; i < playerVal; i++) {
         const gridSquare = document.createElement('div');
