@@ -1,2 +1,4 @@
-# etch-a-sketch
-A drawing program.
+# etas
+Etch-a-sketch project for The Odin Project.
+
+This creates a 16x16 grid of squares that changes color and allows you to draw on it with the mouse as you move across the grid. A button to re-create the grid and reset prior drawing and an input field to create a grid of more or less squares (10x10 or 21x21 for example) up to 100x100 allows the user to reset and alter the grid. The ability to create random colorization as the user hovers over each square in the grid and a feature to darken the color of each grid square by 10% until black (10 "hovers" blackens the square) are to be implemented.
