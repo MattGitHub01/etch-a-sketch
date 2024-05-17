@@ -25,17 +25,17 @@ button.addEventListener('click', () => {
     let colorList = ['#e81416', '#ffa500', '#faeb36', '#79c314', '#487de7', '#4b369d', '#70369d'];
     let color = '';
     if (userInput > 0 && userInput < 101) {
+        drawContainer.style.background = 'black';
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
             let sqOpacity = 1;
-            gridSquare.setAttribute('style', 'width: ' + sqSize + 'px; height: ' + sqSize + 'px');
+            gridSquare.setAttribute('style', 'background-color: white; width: ' + sqSize + 'px; height: ' + sqSize + 'px');
             gridSquare.classList.add('gridSquare');
             drawContainer.appendChild(gridSquare);
             gridSquare.addEventListener('mouseover', () => {
                 color = colorList[Math.floor(Math.random() * colorList.length)];
                 gridSquare.style.background = color;
                 sqOpacity = sqOpacity - .1;
-                alert(sqOpacity);
                 gridSquare.style.opacity = sqOpacity;
             });
             button.addEventListener('click', () => {
@@ -43,6 +43,7 @@ button.addEventListener('click', () => {
             });
         }
     } else {
+        drawContainer.style.background = 'white';
         alert('Error: input must be a number between 1 and 100');
     }
 });
