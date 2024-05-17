@@ -23,7 +23,7 @@ button.addEventListener('click', () => {
     let amtOfSquares = userInput * userInput;
     let sqWidth = 640/userInput;
     let sqHeight = 640/userInput;
-    if ( /^[0-9.,]+$/.test(userInput) && (userInput <= 100 && userInput >= 1)) {
+    if (userInput > 0 && userInput < 101) {
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
             gridSquare.setAttribute('style', 'width: ' + sqWidth + 'px; height: ' + sqHeight + 'px');
@@ -36,7 +36,5 @@ button.addEventListener('click', () => {
                 drawContainer.removeChild(gridSquare);
             });
         }
-    } else {
-        alert('Error: input must be a number between 1 and 100');
     }
 });
