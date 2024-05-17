@@ -19,18 +19,20 @@ drawContainer.classList.add('drawContainer');
 container.appendChild(drawContainer);
 
 button.addEventListener('click', () => {
-    let usrInpt = prompt('How many grid squares per side?');
-    let num = 16;
-    let playerVal = num * num;
-    for (let i = 0; i < playerVal; i++) {
-        const gridSquare = document.createElement('div');
-        gridSquare.classList.add('gridSquare');
-        drawContainer.appendChild(gridSquare);
-        gridSquare.addEventListener('mouseover', () => {
-            gridSquare.style.backgroundColor = 'blue';
-        });
-        button.addEventListener('click', () => {
-            drawContainer.removeChild(gridSquare);
-        });
+    let userInput = parseInt(prompt('Type a number to resize the grid!'));
+    if ( /^[0-9.,]+$/.test(userInput) && userInput <= 100) {
+        let num = 16;
+        let playerVal = num * num;
+        for (let i = 0; i < playerVal; i++) {
+            const gridSquare = document.createElement('div');
+            gridSquare.classList.add('gridSquare');
+            drawContainer.appendChild(gridSquare);
+            gridSquare.addEventListener('mouseover', () => {
+                gridSquare.style.backgroundColor = 'blue';
+            });
+            button.addEventListener('click', () => {
+                drawContainer.removeChild(gridSquare);
+            });
+        }
     }
 });
