@@ -20,7 +20,7 @@ container.appendChild(drawContainer);
 
 button.addEventListener('click', () => {
     let userInput = parseInt(prompt('Type a number to resize the grid!'));
-    if ( /^[0-9.,]+$/.test(userInput) && userInput <= 100) {
+    if ( /^[0-9.,]+$/.test(userInput) && (userInput <= 100 && userInput >= 1)) {
         let num = 16;
         let playerVal = num * num;
         for (let i = 0; i < playerVal; i++) {
