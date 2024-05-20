@@ -2,6 +2,7 @@
 
 const container = document.querySelector('.container');
 
+
 const header1 = document.createElement('h1');
 header1.textContent = 'Etch-A-Sketch!';
 header1.classList.add('header1');
@@ -32,12 +33,12 @@ drawContainer.classList.add('drawContainer');
 container.appendChild(drawContainer);
 
 button.addEventListener('click', () => {
-    let userInput = parseInt(prompt('Type a number to resize the grid!'));
+    let userInput = textInput.value;
     let amtOfSquares = userInput * userInput;
     let sqSize = 640/userInput;
     let colorList = ['#e81416', '#ffa500', '#faeb36', '#79c314', '#487de7', '#4b369d', '#70369d'];
     let color = '';
-    if (userInput > 0 && userInput < 101) {
+    if (userInput >= 1 && userInput <= 100) {
         drawContainer.style.background = 'black';
         for (let i = 0; i < amtOfSquares; i++) {
             const gridSquare = document.createElement('div');
@@ -56,7 +57,7 @@ button.addEventListener('click', () => {
             });
         }
     } else {
-        drawContainer.style.background = 'white';
+        drawContainer.style.background = 'black';
         alert('Error: input must be a number between 1 and 100');
     }
 });
