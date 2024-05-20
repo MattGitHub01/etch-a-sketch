@@ -1,3 +1,5 @@
+// USE const numbers = '0123456789; TO DICTATE ACCEPTABLE CHARACTERS THEN .filter((character) => numerical.includes(character)); OR A VARIATION OF THIS CODE TO ONLY ALLOW NUMERIC INPUT IN THE PROMPT
+
 const container = document.querySelector('.container');
 
 const header1 = document.createElement('h1');
@@ -6,13 +8,24 @@ header1.classList.add('header1');
 container.appendChild(header1);
 
 const header2 = document.createElement('h3');
-header2.textContent = 'Enter a number to size the grid!';
+header2.textContent = 'Enter a number below to size the grid';
 header2.classList.add('header2');
 container.appendChild(header2);
 
+
+const inputField = document.createElement('div');
+inputField.classList.add('inputField');
+container.appendChild(inputField);
+
+const textInput = document.createElement('input');
+textInput.setAttribute('type', 'number');
+textInput.classList.add('textInput');
+inputField.appendChild(textInput);
+
 const button = document.createElement('button');
 button.textContent = 'Draw Grid';
-container.appendChild(button);
+inputField.appendChild(button);
+
 
 const drawContainer = document.createElement('div');
 drawContainer.classList.add('drawContainer');
