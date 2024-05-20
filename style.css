@@ -2,13 +2,6 @@ body {
     background-color: black;
 }
 
-h1 {
-    margin-top: -30px;
-    margin-bottom: -20px;
-    text-decoration: dotted underline;
-    text-decoration-color: white;
-}
-
 .container {
     background-color: black;
     display: flex;
@@ -20,6 +13,9 @@ h1 {
 }
 
 .header1 {
+    margin-top: -30px;
+    margin-bottom: -20px;
+    text-decoration: dotted underline;
     color: white;
     font-family: cursive;
     font-size: 56px;
@@ -29,6 +25,7 @@ h1 {
 .header2 {
     color: white;
     font-family: cursive;
+    font-weight: lighter;
     font-size: 20px;
 }
 
@@ -51,6 +48,23 @@ h1 {
     width: 200px;
     height: 30px;
     background-color: black;
+}
+
+input:focus {
+    border: 2px solid white;
+    outline: none;
+    /* Removes that interior blue outline when you click the input field to size the grid */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+    /* Removes input fields inner arrows when opened in Firefox */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* Removes input field arrows when opened in the other browsers */
 }
 
 button {
