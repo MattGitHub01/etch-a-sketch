@@ -13,6 +13,7 @@ body {
 }
 
 .header1 {
+    letter-spacing: 2px;
     margin-top: -30px;
     margin-bottom: -20px;
     text-decoration: dotted underline;
@@ -23,6 +24,7 @@ body {
 }
 
 .header2 {
+    letter-spacing: 1px;
     color: white;
     font-family: cursive;
     font-weight: lighter;

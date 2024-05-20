@@ -9,7 +9,7 @@ header1.classList.add('header1');
 container.appendChild(header1);
 
 const header2 = document.createElement('h3');
-header2.textContent = 'Enter a number below to size the grid';
+header2.textContent = 'Enter a number below to custom size the drawing grid';
 header2.classList.add('header2');
 container.appendChild(header2);
 
