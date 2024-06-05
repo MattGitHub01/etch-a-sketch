@@ -59,7 +59,7 @@ input:focus {
 }
 
 input[type=number] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
     /* Removes input fields inner arrows when opened in Firefox */
 }
 
