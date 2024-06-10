@@ -1,5 +1,3 @@
-// USE const numbers = '0123456789; TO DICTATE ACCEPTABLE CHARACTERS THEN .filter((character) => numerical.includes(character)); OR A VARIATION OF THIS CODE TO ONLY ALLOW NUMERIC INPUT IN THE PROMPT
-
 const container = document.querySelector('.container');
 
 
