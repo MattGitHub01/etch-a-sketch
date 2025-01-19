@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 
 
 const header1 = document.createElement('h1');
-header1.textContent = 'Etch-A-Sketch!';
+header1.textContent = 'Tech-A-Sketch!';
 header1.classList.add('header1');
 container.appendChild(header1);
 
